@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  height: 100dvh;
+  background-color: #fff7e9;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.inputsContainer {
+  display: flex;
+  gap: 10px;
+}
+
+input,
+select {
+  width: 100px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+select {
+  width: 50px;
+}
+
+.output {
+  text-align: center;
+  padding: 10px;
+  height: 20px;
+  min-width: 20px;
+  width: fit-content;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: goldenrod;
+}

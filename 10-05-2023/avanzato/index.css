@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  height: 100dvh;
+  background-color: #fff7e9;
+  display: grid;
+  place-content: center;
+}
+
+.calculator {
+  width: 300px;
+  margin: 0 auto;
+  background: #f2f2f2;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.screen {
+  height: 50px;
+  margin-bottom: 20px;
+  background: #f2f2f2;
+  box-shadow: inset 5px 5px 10px #d9d9d9, inset -5px -5px 10px #ffffff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.screen p {
+  margin: 0;
+  font-size: 24px;
+  color: #555;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+button {
+  height: 60px;
+  font-size: 28px;
+  border: none;
+  border-radius: 20px;
+  background: #f2f2f2;
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+button:hover {
+  box-shadow: 3px 3px 5px #d9d9d9, -3px -3px 5px #ffffff;
+}
+
+.operator {
+  background: linear-gradient(145deg, #d5d5d5, #e5e5e5);
+  color: #555;
+}
+
+.equals {
+  background: linear-gradient(145deg, #d5d5d5, #e5e5e5);
+}
