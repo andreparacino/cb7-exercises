@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.Button {
+  padding: 8px 12px;
+  border: 1px solid black;
+  border-radius: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background: black;
+    color: white;
+  }
+}
+
+.Header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aliceblue;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
+  }
+
+  &-links {
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  &-actions {
+  }
+}
+
+.Hero {
+  position: relative;
+  margin-bottom: 35px;
+  color: white;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+  }
+
+  &-content {
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    width: 80%;
+    transform: translateY(-50%);
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  h2 {
+    height: auto;
+    margin: 0;
+  }
+}
+
+.FirstLevelFilters {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  &-category {
+    padding: 8px 12px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+}
+
+.SecondLevelFilters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  input {
+    display: none;
+  }
+  label {
+    cursor: pointer;
+    padding: 8px 12px;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition: all 0.3s;
+  }
+
+  input:checked + label {
+    background: black;
+    color: white;
+  }
+}
+
+.Products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+
+  &-product {
+    cursor: pointer;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    &Body {
+      height: 100%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: space-between;
+
+      p,
+      h3,
+      h4 {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.Overlay {
+  position: fixed;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Modal {
+  padding: 10px;
+  max-width: 800px;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.706);
+
+  &-image {
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  &-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .Modal {
+    flex-direction: row;
+    gap: 20px;
+
+    &-image {
+      width: 50%;
+      height: auto;
+    }
+
+    &-productDetails {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+      padding: 15px 0;
+
+      h2 {
+        margin: 0;
+      }
+    }
+  }
+}
