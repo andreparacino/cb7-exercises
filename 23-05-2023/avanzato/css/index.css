@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background-color: lightblue;
+}
+
+.Button {
+  padding: 8px 12px;
+  border: 1px solid black;
+  border-radius: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.Button:hover {
+  background: black;
+  color: white;
+}
+
+.Overlay {
+  position: fixed;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AuthModal {
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.AuthModal form {
+  display: flex;
+  flex-direction: column;
+}
+.AuthModal form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.AuthModal form button[type=submit] {
+  padding: 10px 20px;
+  background-color: #428bca;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.AuthModal form button[type=submit]:hover {
+  background-color: #3071a9;
+}
+
+.Cart {
+  border-radius: 10px;
+  margin-bottom: 50px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.Cart h2 {
+  margin-top: 0;
+}
+.Cart .item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.Cart .item-list {
+  list-style-type: none;
+  padding: 0;
+}
+.Cart .item-details {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.Cart .item-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-right: auto;
+}
+.Cart .item-quantity {
+  display: flex;
+  align-items: center;
+}
+.Cart .item-quantity label {
+  margin-right: 5px;
+}
+.Cart .remove-button {
+  background-color: #ff5c5c;
+  border: none;
+}
+.Cart .action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.Cart .clear-button {
+  background-color: #ff5c5c;
+  border: none;
+}
+.Cart .checkout-button {
+  background-color: #4caf50;
+  border: none;
+}
+.Cart .checkout-button:hover,
+.Cart .remove-button:hover,
+.Cart .clear-button:hover {
+  opacity: 0.8;
+  color: black;
+}
+
+/*# sourceMappingURL=index.css.map */
