@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.Navbar {
+  position: fixed;
+  width: 64px;
+  padding: 15px;
+  height: calc(100svh - 30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.Navbar-logo svg {
+  fill: rgb(74, 153, 233);
+}
+.Navbar-icon {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 13px;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+.Navbar-icon svg {
+  width: 30px;
+  transition: all 0.3s;
+}
+.Navbar-icon:hover {
+  background: #f5f5f5;
+}
+.Navbar-icon span {
+  font-size: 18px;
+  display: none;
+  transition: all 0.3s;
+}
+.Navbar-tweetButton {
+  background-color: rgb(74, 153, 233);
+  color: white;
+  transition: all 0.3s;
+}
+.Navbar-tweetButton span {
+  color: white;
+  display: none;
+}
+.Navbar-tweetButton svg {
+  fill: white;
+}
+.Navbar-tweetButton:hover {
+  background: #1d7fe3;
+}
+.Navbar-navItem--active svg {
+  fill: rgb(74, 153, 233);
+}
+.Navbar-navItem--active span {
+  color: rgb(74, 153, 233);
+  font-weight: bold;
+}
+.Navbar-profileInfo {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-end;
+  border-radius: 45px;
+  gap: 15px;
+  cursor: pointer;
+}
+.Navbar-profileInfo img {
+  border-radius: 50%;
+}
+.Navbar-profileInfo div {
+  display: none;
+}
+.Navbar-profileInfo button {
+  background: none;
+  display: none;
+}
+
+.Main {
+  position: relative;
+  width: 500px;
+  min-height: 100svh;
+  margin-left: 94px;
+  border-left: 1px solid #e6ecf0;
+  border-right: 1px solid #e6ecf0;
+}
+.Main-header {
+  width: 500px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6ecf0;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+}
+.Main-header h2 {
+  padding-left: 15px;
+}
+.Main-header-options {
+  display: flex;
+  width: 100%;
+}
+.Main-header-optionsItem {
+  text-align: center;
+  width: 100%;
+  height: 53px;
+  background: none;
+  transition: all 0.3s;
+  font-weight: bold;
+  color: gray;
+  position: relative;
+}
+.Main-header-optionsItem:hover {
+  background: #f5f5f5;
+}
+.Main-header-optionsItem::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 25%;
+  height: 4px;
+  border-radius: 5px;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+.Main-header-optionsItem--active {
+  color: black;
+}
+.Main-header-optionsItem--active::after {
+  background-color: rgb(74, 153, 233);
+}
+
+@media screen and (min-width: 769px) {
+  .Navbar {
+    width: 240px;
+    align-items: flex-start;
+  }
+  .Navbar-icon span {
+    display: block;
+  }
+  .Navbar-tweetButton {
+    width: 100%;
+  }
+  .Navbar-tweetButton svg {
+    display: none;
+  }
+  .Navbar-tweetButton span {
+    display: block;
+  }
+  .Navbar-profileInfo div {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .Navbar-profileInfo div span:first-child {
+    font-weight: bold;
+  }
+  .Navbar-profileInfo button {
+    display: block;
+  }
+  .Navbar-profileInfo button svg {
+    width: 20px;
+  }
+  .Main {
+    margin-left: 270px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

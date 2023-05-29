@@ -1,0 +1,236 @@
+$blue: rgb(74, 153, 233);
+$navbar-width: 64px;
+$navbar-width-desktop: 240px;
+$navbar-padding: 15px;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.Navbar {
+  position: fixed;
+  width: $navbar-width;
+  padding: $navbar-padding;
+  height: calc(100svh - $navbar-padding * 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  &-logo {
+    svg {
+      fill: $blue;
+    }
+  }
+
+  &-icon {
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 13px;
+    border-radius: 30px;
+    transition: all 0.3s;
+
+    svg {
+      width: 30px;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      background: #f5f5f5;
+    }
+
+    span {
+      font-size: 18px;
+      display: none;
+      transition: all 0.3s;
+    }
+  }
+
+  &-tweetButton {
+    background-color: $blue;
+    color: white;
+    transition: all 0.3s;
+    span {
+      color: white;
+      display: none;
+    }
+    svg {
+      fill: white;
+    }
+
+    &:hover {
+      background: darken($blue, 10%);
+    }
+  }
+
+  &-navItem {
+    &--active {
+      svg {
+        fill: $blue;
+      }
+      span {
+        color: $blue;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-profileInfo {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: flex-end;
+    border-radius: 45px;
+    gap: 15px;
+    cursor: pointer;
+
+    img {
+      border-radius: 50%;
+    }
+
+    div {
+      display: none;
+    }
+
+    button {
+      background: none;
+      display: none;
+    }
+  }
+}
+
+.Main {
+  position: relative;
+  width: 500px;
+  min-height: 100svh;
+  margin-left: $navbar-width + $navbar-padding * 2;
+  border-left: 1px solid #e6ecf0;
+  border-right: 1px solid #e6ecf0;
+
+  &-header {
+    width: 500px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6ecf0;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+
+    h2 {
+      padding-left: 15px;
+    }
+
+    &-options {
+      display: flex;
+      width: 100%;
+
+      &Item {
+        text-align: center;
+        width: 100%;
+        height: 53px;
+        background: none;
+        transition: all 0.3s;
+        font-weight: bold;
+        color: gray;
+        position: relative;
+
+        &:hover {
+          background: #f5f5f5;
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          display: block;
+          width: 25%;
+          height: 4px;
+          border-radius: 5px;
+          bottom: 1px;
+          left: 50%;
+          transform: translateX(-50%);
+          margin: 0 auto;
+          background-color: transparent;
+          transition: all 0.3s;
+        }
+
+        &--active {
+          color: black;
+
+          &::after {
+            background-color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+// .Aside {
+//   height: 100svh;
+//   width: 300px;
+//   background-color: red;
+// }
+
+@media screen and (min-width: 769px) {
+  .Navbar {
+    width: $navbar-width-desktop;
+    align-items: flex-start;
+
+    &-icon {
+      span {
+        display: block;
+      }
+    }
+
+    &-tweetButton {
+      width: 100%;
+      svg {
+        display: none;
+      }
+      span {
+        display: block;
+      }
+    }
+
+    &-profileInfo {
+      div {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        span:first-child {
+          font-weight: bold;
+        }
+      }
+      button {
+        display: block;
+
+        svg {
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  .Main {
+    margin-left: $navbar-width-desktop + $navbar-padding * 2;
+  }
+}
